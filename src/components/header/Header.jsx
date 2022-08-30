@@ -20,10 +20,6 @@ const Header = () => {
           <p>Home</p>
         </Link>
 
-        <Link to="/rent">
-          <p>Rent</p>
-        </Link>
-
         <Link to="/buy">
           <p>Buy</p>
         </Link>
