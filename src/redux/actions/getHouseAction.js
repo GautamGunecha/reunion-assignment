@@ -1,10 +1,10 @@
 import * as actionTypes from "../constants/actionType";
 
-export const getHouseListsAction = (data) => async (dispatch) => {
+export const getHouseListsAction = () => async (dispatch) => {
   try {
     dispatch({
       type: actionTypes.GET_ALL_LISTED_PROPERTY,
-      payload: data,
+      payload: [],
     });
   } catch (error) {
     dispatch({

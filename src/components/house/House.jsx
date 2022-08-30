@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getHouseListsAction } from "../../redux/actions/getHouseAction";
 
 import "./House.css";
 
 const House = () => {
   const date = new Date().toISOString();
   const todayDate = date.slice(0, date.indexOf("T"));
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getHouseListsAction());
+  }, [dispatch]);
   return (
     <div className="house">
       <section>
