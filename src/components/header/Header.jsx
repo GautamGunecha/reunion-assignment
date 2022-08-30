@@ -19,12 +19,19 @@ const Header = () => {
         <Link to="/">
           <p>Home</p>
         </Link>
+
+        <Link to="/rent">
+          <p>Rent</p>
+        </Link>
+
         <Link to="/buy">
           <p>Buy</p>
         </Link>
+
         <Link to="/sell">
           <p>Sell</p>
         </Link>
+
         <Link to="/">
           <p>Contact</p>
         </Link>
