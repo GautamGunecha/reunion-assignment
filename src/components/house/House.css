@@ -1,0 +1,88 @@
+.house {
+    width: 100%;
+    margin: 1em auto;
+    padding: 1em 2em;
+}
+
+.house section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.house section h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.house input {
+    width: 20em;
+    padding: 8px;
+}
+
+.house-filters {
+    margin-top: 2em;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.house-filters input {
+    width: 15em;
+    padding: 8px;
+}
+
+.house-filters section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.house-filters section p {
+    font-size: small;
+    font-weight: lighter;
+    color: #837b7b;
+}
+
+.house-filters section select {
+    width: 15em;
+    padding: 8px;
+}
+
+
+.house-filters section button {
+    width: 8em;
+    padding: .7em;
+    cursor: pointer;
+    border: none;
+    background-color: #e82222;
+    color: #fff;
+    font-size: 16px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .house {
+        width: 100%;
+        padding: 1em 1.1em;
+    }
+
+    .house section {
+        width: 100%;
+        gap: 1em;
+    }
+
+    .house section h1 {
+        width: 50%;
+        font-size: 12px;
+    }
+
+    .house input {
+        width: 50%;
+    }
+}

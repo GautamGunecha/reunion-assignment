@@ -1,0 +1,28 @@
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    position: fixed;
+    z-index: 100;
+    padding: .8em 2em;
+}
+
+.header section h1 {
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.header section p {
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
