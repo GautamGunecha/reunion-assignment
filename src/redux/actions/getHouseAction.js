@@ -16,10 +16,18 @@ export const getHouseListsAction = (data) => async (dispatch) => {
 
 export const wishListAction = (id) => async (dispatch, getState) => {
   try {
+    const {
+      listedProperty: { houses },
+    } = getState();
+
+    const selectedHouse = houses.find((item) => item.id === parseInt(id));
+
     dispatch({
       type: actionTypes.ADD_TO_WISHLIST,
-      payload: id,
+      payload: selectedHouse,
     });
+
+    localStorage.setItem("wishList", JSON.stringify(getState().wishLists.wish));
   } catch (error) {
     dispatch({
       type: actionTypes.ADD_TO_WISHLIST,
@@ -32,8 +40,9 @@ export const removeFromWishListAction = (id) => async (dispatch, getState) => {
   try {
     dispatch({
       type: actionTypes.REMOVE_FROM_WISHLIST,
-      payload: id,
+      payload: parseInt(id),
     });
+    localStorage.setItem("wishList", JSON.stringify(getState().wishLists.wish));
   } catch (error) {
     dispatch({
       type: actionTypes.REMOVE_FROM_WISHLIST,

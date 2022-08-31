@@ -11,10 +11,19 @@ const reducers = combineReducers({
   wishLists: wishListReducer,
 });
 
+const watchLists = localStorage.getItem("wishList")
+  ? JSON.parse(localStorage.getItem("wishList"))
+  : [];
+
+const initialState = {
+  wishLists: { wish: watchLists },
+};
+
 const middleware = [thunk];
 
 const store = createStore(
   reducers,
+  initialState,
   composeWithDevTools(applyMiddleware(...middleware))
 );
 

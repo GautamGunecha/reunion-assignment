@@ -20,10 +20,26 @@ export const getHouseListReducer = (state = houseListState, action) => {
 export const wishListReducer = (state = wishListState, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_WISHLIST:
-      break;
-
+      const selectedHouse = action.payload;
+      const ifHouse = state.wish.find((house) => house.id === selectedHouse.id);
+      if (ifHouse) {
+        return {
+          ...state,
+          wish: state.wish.map((x) =>
+            x.id === ifHouse.id ? selectedHouse : x
+          ),
+        };
+      } else {
+        return {
+          ...state,
+          wish: [...state.wish, selectedHouse],
+        };
+      }
     case actionTypes.REMOVE_FROM_WISHLIST:
-      break;
+      return {
+        ...state,
+        wish: state.wish.filter((x) => x.id !== action.payload),
+      };
 
     default:
       return state;

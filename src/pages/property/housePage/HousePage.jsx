@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineHeart } from "react-icons/ai";
+import { MdOutlineBedroomParent, MdOutlineBathroom } from "react-icons/md";
 
 import "./HousePage.css";
 import Consider from "../../../components/consider/Consider";
@@ -30,8 +31,14 @@ const HousePage = () => {
             <p>{data.location}</p>
             <p>{data.address}</p>
             <p>₹ {data.rates}/ month</p>
-            <p>{data.beds}</p>
-            <p>{data.bathroom}</p>
+            <span>
+              <MdOutlineBedroomParent size={25} />
+              <p>{data.beds} beds</p>
+            </span>
+            <span>
+              <MdOutlineBathroom size={25} />
+              <p>{data.bathroom} bathrooms</p>
+            </span>
             <p>Available for {data.category}</p>
             <p>Property Type {data.propertyType}</p>
             <section>
