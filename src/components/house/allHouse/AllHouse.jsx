@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -12,8 +12,9 @@ import "./AllHouse.css";
 
 const postPerRow = 8;
 
-const AllHouse = ({ houses }) => {
+const AllHouse = ({ houses, search }) => {
   const [next, setNext] = useState(postPerRow);
+  const [data, setData] = useState([]);
 
   const dispatch = useDispatch();
   const { wish } = useSelector((state) => state.wishLists);
@@ -30,10 +31,18 @@ const AllHouse = ({ houses }) => {
     setNext(next + postPerRow);
   };
 
+  useEffect(() => {
+    const filterData = houses?.filter((val) => {
+      return val.title.toLowerCase().includes(search.toLowerCase());
+    });
+
+    setData(filterData);
+  }, [houses, search]);
+
   return (
     <div>
       <div className="all-houses">
-        {houses?.slice(0, next).map((data) => (
+        {data?.slice(0, next).map((data) => (
           <Card key={data.id}>
             <div className="all-houses-card">
               <Link to={`/property/${data.id}`}>

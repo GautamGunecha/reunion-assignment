@@ -22,7 +22,7 @@ export const HouseData = [
   // Mumbai
   {
     id: 1,
-    title: "Palm Harbor",
+    title: "Palm Harbor Mumbai",
     img: HomeImg1,
     location: "Mumbai, India",
     rates: 50000,
@@ -48,7 +48,7 @@ export const HouseData = [
   },
   {
     id: 3,
-    title: "Faulkner Ave",
+    title: "Faulkner Ave East",
     img: HomeImg3,
     location: "Mumbai, India",
     rates: 100000,
@@ -74,7 +74,7 @@ export const HouseData = [
   },
   {
     id: 5,
-    title: "Faulkner Ave",
+    title: "Faulkner Ave West",
     img: HomeImg5,
     location: "Mumbai, India",
     rates: 80000,
@@ -88,7 +88,7 @@ export const HouseData = [
   // Delhi
   {
     id: 6,
-    title: "Maple Cedar",
+    title: "Palm Harbor Delhi",
     img: HomeImg6,
     location: "Delhi, India",
     rates: 25000,
@@ -220,4 +220,35 @@ export const HouseData = [
   // Varanasi
   // Chennai
   // Surat
+];
+
+export const locationFilter = [
+  {
+    id: 0,
+    title: "Select Location",
+  },
+  {
+    id: 1,
+    title: "Mumbai India",
+  },
+  {
+    id: 2,
+    title: "Delhi India",
+  },
+  {
+    id: 3,
+    title: "Pune India",
+  },
+  {
+    id: 4,
+    title: "Varanasi India",
+  },
+  {
+    id: 5,
+    title: "Chennai India",
+  },
+  {
+    id: 6,
+    title: "Surat India",
+  },
 ];
