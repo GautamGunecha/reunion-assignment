@@ -1,17 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { AiOutlineHeart } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { MdOutlineBedroomParent, MdOutlineBathroom } from "react-icons/md";
 
 import "./HousePage.css";
 import Consider from "../../../components/consider/Consider";
+import {
+  removeFromWishListAction,
+  wishListAction,
+} from "../../../redux/actions/getHouseAction";
 
 const HousePage = () => {
+  const dispatch = useDispatch();
+
   const { id } = useParams();
   const [data, setData] = useState([]);
 
   const { houses } = useSelector((state) => state.listedProperty);
+  const { wish } = useSelector((state) => state.wishLists);
+
+  const addToWishList = (id) => {
+    dispatch(wishListAction(id));
+  };
+
+  const removeFromWishList = (id) => {
+    dispatch(removeFromWishListAction(id));
+  };
 
   useEffect(() => {
     const getHouseById = () => {
@@ -42,7 +57,19 @@ const HousePage = () => {
             <p>Available for {data.category}</p>
             <p>Property Type {data.propertyType}</p>
             <section>
-              <AiOutlineHeart className="icon" size={35} />
+              {wish.find((item) => item.id === parseInt(data.id)) ? (
+                <AiFillHeart
+                  size={25}
+                  className="icon house-icon"
+                  onClick={() => removeFromWishList(data.id)}
+                />
+              ) : (
+                <AiOutlineHeart
+                  size={25}
+                  className="icon house-icon"
+                  onClick={() => addToWishList(data.id)}
+                />
+              )}
               <button>Rent this property</button>
             </section>
           </div>

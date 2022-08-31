@@ -9,8 +9,8 @@ const Consider = () => {
 
   return (
     <div className="consideration">
-      <h1>People all look for</h1>
-      {houses.slice(0, 5).map((data) => (
+      <h1>People also look for</h1>
+      {houses.slice(0, 4).map((data) => (
         <div key={data.id} className="consideration-list">
           <Link to={`/property/${data.id}`}>
             <img src={data.img} alt={data.title} />
