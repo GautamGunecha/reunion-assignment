@@ -31,9 +31,9 @@ const Footer = () => {
             </ul>
           </section>
           <section className="footer-main-right">
-            <AiOutlineFacebook size={30} />
-            <AiOutlineTwitter size={30} />
-            <AiOutlineInstagram size={30} />
+            <AiOutlineFacebook size={35} className="icon facebook" />
+            <AiOutlineTwitter size={35} className="icon twitter" />
+            <AiOutlineInstagram size={35} className="icon instagram" />
           </section>
         </div>
         <div className="footer-bottom">

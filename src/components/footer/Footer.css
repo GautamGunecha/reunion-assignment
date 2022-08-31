@@ -58,6 +58,18 @@
     gap: 1em;
 }
 
+.facebook {
+    fill: blue;
+}
+
+.twitter {
+    fill: skyblue;
+}
+
+.instagram {
+    fill: rgb(230, 50, 50);
+}
+
 
 @media only screen and (max-width: 600px) {
     .footer {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Card from "../../card/Card";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -10,7 +11,9 @@ const AllHouse = ({ houses }) => {
       {houses.map((data) => (
         <Card key={data.id}>
           <div className="all-houses-card">
-            <img src={data.img} alt="" />
+            <Link to={`/property/${data.id}`}>
+              <img src={data.img} alt="" />
+            </Link>
             <div className="all-houses-details">
               <div className="all-houses-costing">
                 <p>₹ {data.rates}/month</p>

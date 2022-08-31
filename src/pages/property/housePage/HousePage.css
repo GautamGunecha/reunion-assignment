@@ -1,0 +1,73 @@
+.housePage {
+    width: 100%;
+}
+
+.house-page {
+    display: flex;
+    align-items: flex-start;
+    padding: 5em 1em;
+    gap: 2em;
+}
+
+.house-page img {
+    object-fit: contain;
+    width: 50%;
+}
+
+.house-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.house-details h1 {
+    font-size: 60px;
+    font-family: cursive;
+}
+
+.house-details p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.house-details section {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.house-details section button {
+    padding: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    background-color: rgb(43, 51, 195);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .house-page {
+        flex-direction: column;
+        padding: 4.5em .5em;
+        /* gap: 2em; */
+    }
+
+    .house-page img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .house-details h1 {
+        font-size: 40px;
+        font-family: cursive;
+    }
+
+    .house-details p {
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+}

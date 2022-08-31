@@ -1,0 +1,20 @@
+.consideration {
+    width: 100%;
+    padding: 5em 1em;
+}
+
+.consideration h1 {
+    font-size: 30px;
+    font-family: cursive;
+    margin-bottom: 1em;
+}
+
+.consideration-list {
+    display: inline-block;
+}
+
+.consideration-list img {
+    object-fit: contain;
+    width: 370px;
+    height: 230px;
+}
