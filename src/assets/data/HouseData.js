@@ -9,6 +9,11 @@ import HomeImg7 from "../images/houses/HomeImg7.jpg";
 import HomeImg8 from "../images/houses/HomeImg8.jpg";
 import HomeImg9 from "../images/houses/HomeImg9.jpg";
 import HomeImg10 from "../images/houses/HomeImg10.jpg";
+import HomeImg11 from "../images/houses/HomeImg11.jpg";
+import HomeImg12 from "../images/houses/HomeImg12.jpg";
+import HomeImg13 from "../images/houses/HomeImg13.jpg";
+import HomeImg14 from "../images/houses/HomeImg14.jpg";
+import HomeImg15 from "../images/houses/HomeImg15.jpg";
 
 // category rent it - (3) or sell - (2)
 // property type: - houses(3), appartments(1), commercial(1)
@@ -147,6 +152,71 @@ export const HouseData = [
     propertyType: "commercial",
   },
   // Pune
+  {
+    id: 11,
+    title: "HillTown Oak View",
+    img: HomeImg11,
+    location: "Pune, India",
+    rates: 150000,
+    address: "101 Ghat Par Pune, India",
+    beds: "4",
+    bathroom: "3",
+    category: "sell",
+    availableFrom: "1/5/2012",
+    propertyType: "commercial",
+  },
+  {
+    id: 12,
+    title: "HillTown Bollywood View",
+    img: HomeImg12,
+    location: "Pune, India",
+    rates: 80000,
+    address: "1001 Mera Bhag, India",
+    beds: "4",
+    bathroom: "3",
+    category: "sell",
+    availableFrom: "1/1/2023",
+    propertyType: "commercial",
+  },
+  {
+    id: 13,
+    title: "Bollywood Nort West Side",
+    img: HomeImg13,
+    location: "Pune, India",
+    rates: 60000,
+    address: "51568 Bollywood north west, India",
+    beds: "2",
+    bathroom: "3",
+    category: "rent",
+    availableFrom: "1/12/2020",
+    propertyType: "houses",
+  },
+  {
+    id: 14,
+    title: "Downtown Road",
+    img: HomeImg14,
+    location: "Pune, India",
+    rates: 80000,
+    address: "1001 Santhi Bazar, India",
+    beds: "6",
+    bathroom: "4",
+    category: "rent",
+    availableFrom: "1/1/2019",
+    propertyType: "houses",
+  },
+  {
+    id: 15,
+    title: "Old Ghat View",
+    img: HomeImg15,
+    location: "Pune, India",
+    rates: 20000,
+    address: "1001 Old Ghat, India",
+    beds: "7",
+    bathroom: "3",
+    category: "rent",
+    availableFrom: "1/8/2028",
+    propertyType: "appartment",
+  },
   // Varanasi
   // Chennai
   // Surat
