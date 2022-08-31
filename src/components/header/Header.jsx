@@ -22,14 +22,6 @@ const Header = () => {
           <p>Home</p>
         </Link>
 
-        <Link to="/buy">
-          <p>Buy</p>
-        </Link>
-
-        <Link to="/sell">
-          <p>Sell</p>
-        </Link>
-
         <Link to="/">
           <p>Contact</p>
         </Link>
