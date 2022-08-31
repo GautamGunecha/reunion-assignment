@@ -37,7 +37,7 @@ const AllHouse = ({ houses }) => {
           <Card key={data.id}>
             <div className="all-houses-card">
               <Link to={`/property/${data.id}`}>
-                <img src={data.img} alt="" />
+                <img src={data.img} alt={data.title} />
               </Link>
               <div className="all-houses-details">
                 <div className="all-houses-costing">
