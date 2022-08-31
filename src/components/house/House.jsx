@@ -12,10 +12,11 @@ const House = () => {
 
   return (
     <div className="house">
-      <section>
+      <section className="house-search">
         <h1>Search Property to rent</h1>
         <input type="text" placeholder="Search Property by title" />
       </section>
+
       <div className="house-filters">
         <section>
           <p>Location</p>
@@ -23,18 +24,15 @@ const House = () => {
         </section>
         <section>
           <p>When</p>
-          <input type="date" min={todayDate} name="" id="" />
+          <input type="date" min={todayDate} />
         </section>
         <section>
           <p>Price</p>
-          <select name="" id=""></select>
+          <select></select>
         </section>
         <section>
           <p>Property Type</p>
           <select name="" id=""></select>
-        </section>
-        <section>
-          <button type="button">Search</button>
         </section>
       </div>
       <AllHouse houses={houses} />
