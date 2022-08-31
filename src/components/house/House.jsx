@@ -3,11 +3,19 @@ import { useSelector } from "react-redux";
 
 import "./House.css";
 import AllHouse from "./allHouse/AllHouse";
-import { locationFilter } from "../../assets/data/HouseData";
+import {
+  propertyTypes,
+  locationFilter,
+  priceFilter,
+} from "../../assets/data/HouseData";
 
 const House = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
   const [loc, setLoc] = useState("");
+  const [propertyType, setPropertyType] = useState("");
+  const [moveInDate, setmoveInDate] = useState("");
+
+  // const daysBetween =
 
   const date = new Date().toISOString();
   const todayDate = date.slice(0, date.indexOf("T"));
@@ -19,10 +27,10 @@ const House = () => {
       <section className="house-search">
         <h1>Search Property to rent</h1>
         <input
-          value={searchTerm}
+          value={searchQuery}
           type="text"
-          placeholder="Search Property by title"
-          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search."
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
       </section>
 
@@ -30,6 +38,7 @@ const House = () => {
         <section>
           <p>Location</p>
           <select value={loc} onChange={(e) => setLoc(e.target.value)}>
+            <option value="">Select</option>
             {locationFilter?.map((item) => (
               <option key={item.id} value={item.title}>
                 {item.title}
@@ -40,20 +49,44 @@ const House = () => {
 
         <section>
           <p>When</p>
-          <input type="date" min={todayDate} />
+          <input
+            onChange={(e) => setmoveInDate(e.target.value)}
+            type="date"
+            min={todayDate}
+          />
         </section>
 
         <section>
           <p>Price</p>
-          <select></select>
+          <select>
+            <option value="">Select</option>
+            {priceFilter?.map((item) => (
+              <option key={item.id} value={[item.min, item.max]}>
+                {item.min} - {item.max}
+              </option>
+            ))}
+          </select>
         </section>
 
         <section>
           <p>Property Type</p>
-          <select name="" id=""></select>
+          <select onChange={(e) => setPropertyType(e.target.value)}>
+            <option value="">Select</option>
+            {propertyTypes?.map((item) => (
+              <option key={item.id} value={item.title}>
+                {item.title}
+              </option>
+            ))}
+          </select>
         </section>
       </div>
-      <AllHouse houses={houses} search={searchTerm} location={loc} />
+      <AllHouse
+        houses={houses}
+        search={searchQuery}
+        location={loc}
+        type={propertyType}
+        moveInDate={moveInDate}
+      />
     </div>
   );
 };

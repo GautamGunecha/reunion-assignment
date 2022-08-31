@@ -17,6 +17,7 @@ import HomeImg15 from "../images/houses/HomeImg15.jpg";
 
 // category rent it - (3) or sell - (2)
 // property type: - houses(3), appartments(1), commercial(1)
+//  Date yyyy-mm-dd
 
 export const HouseData = [
   // Mumbai
@@ -30,7 +31,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "rent",
-    availableFrom: "31/01/2022",
+    availableFrom: "2036-01-31",
     propertyType: "houses",
   },
   {
@@ -43,7 +44,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "rent",
-    availableFrom: "02/10/2022",
+    availableFrom: "2022-02-10",
     propertyType: "commercial",
   },
   {
@@ -56,7 +57,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "rent",
-    availableFrom: "01/12/2022",
+    availableFrom: "2022-12-01",
     propertyType: "appartments",
   },
   {
@@ -69,7 +70,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "sell",
-    availableFrom: "01/02/2022",
+    availableFrom: "2020-10-10",
     propertyType: "houses",
   },
   {
@@ -82,7 +83,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "sell",
-    availableFrom: "01/05/2022",
+    availableFrom: "2018-01-10",
     propertyType: "houses",
   },
   // Delhi
@@ -96,7 +97,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "rent",
-    availableFrom: "15/05/2022",
+    availableFrom: "2020-10-10",
     propertyType: "houses",
   },
   {
@@ -109,7 +110,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "rent",
-    availableFrom: "15/06/2022",
+    availableFrom: "2022-12-10",
     propertyType: "houses",
   },
   {
@@ -122,7 +123,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "rent",
-    availableFrom: "11/11/2020",
+    availableFrom: "2020-05-10",
     propertyType: "houses",
   },
   {
@@ -135,7 +136,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "sell",
-    availableFrom: "1/1/2020",
+    availableFrom: "2022-09-10",
     propertyType: "appartments",
   },
   {
@@ -148,7 +149,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "sell",
-    availableFrom: "1/1/2023",
+    availableFrom: "2022-07-10",
     propertyType: "commercial",
   },
   // Pune
@@ -162,7 +163,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "sell",
-    availableFrom: "1/5/2012",
+    availableFrom: "2022-02-10",
     propertyType: "commercial",
   },
   {
@@ -175,7 +176,7 @@ export const HouseData = [
     beds: "4",
     bathroom: "3",
     category: "sell",
-    availableFrom: "1/1/2023",
+    availableFrom: "2022-09-10",
     propertyType: "commercial",
   },
   {
@@ -188,7 +189,7 @@ export const HouseData = [
     beds: "2",
     bathroom: "3",
     category: "rent",
-    availableFrom: "1/12/2020",
+    availableFrom: "2028-12-10",
     propertyType: "houses",
   },
   {
@@ -201,7 +202,7 @@ export const HouseData = [
     beds: "6",
     bathroom: "4",
     category: "rent",
-    availableFrom: "1/1/2019",
+    availableFrom: "2016-6-10",
     propertyType: "houses",
   },
   {
@@ -214,7 +215,7 @@ export const HouseData = [
     beds: "7",
     bathroom: "3",
     category: "rent",
-    availableFrom: "1/8/2028",
+    availableFrom: "2016-6-10",
     propertyType: "appartment",
   },
   // Varanasi
@@ -224,31 +225,43 @@ export const HouseData = [
 
 export const locationFilter = [
   {
-    id: 0,
-    title: "Select Location",
-  },
-  {
     id: 1,
-    title: "Mumbai India",
+    title: "Mumbai, India",
   },
   {
     id: 2,
-    title: "Delhi India",
+    title: "Delhi, India",
   },
   {
     id: 3,
-    title: "Pune India",
+    title: "Pune, India",
   },
   {
     id: 4,
-    title: "Varanasi India",
+    title: "Varanasi, India",
   },
   {
     id: 5,
-    title: "Chennai India",
+    title: "Chennai, India",
   },
   {
     id: 6,
-    title: "Surat India",
+    title: "Surat, India",
   },
+];
+
+export const priceFilter = [
+  { id: 1, min: 0, max: 20000 },
+  { id: 2, min: 20000, max: 40000 },
+  { id: 3, min: 40000, max: 60000 },
+  { id: 4, min: 60000, max: 80000 },
+  { id: 5, min: 80000, max: 100000 },
+  { id: 6, min: 100000, max: 150000 },
+];
+
+// houses(3), appartments(1), commercial(1);
+export const propertyTypes = [
+  { id: 1, title: "houses" },
+  { id: 2, title: "appartments" },
+  { id: 3, title: "commercial" },
 ];

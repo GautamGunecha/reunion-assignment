@@ -11,8 +11,9 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import "./AllHouse.css";
 
 const postPerRow = 8;
+const keys = ["title", "location", "address", "category", "propertyType"];
 
-const AllHouse = ({ houses, search }) => {
+const AllHouse = ({ houses, search, location, type, price, moveInDate }) => {
   const [next, setNext] = useState(postPerRow);
   const [data, setData] = useState([]);
 
@@ -32,12 +33,31 @@ const AllHouse = ({ houses, search }) => {
   };
 
   useEffect(() => {
-    const filterData = houses?.filter((val) => {
-      return val.title.toLowerCase().includes(search.toLowerCase());
-    });
+    let filterData = houses?.filter((item) =>
+      keys.some((key) => item[key].toLowerCase().includes(search.toLowerCase()))
+    );
+
+    if (location) {
+      filterData = filterData?.filter((item) =>
+        item.location.toLowerCase().includes(location.toLowerCase())
+      );
+    }
+
+    if (type) {
+      filterData = filterData?.filter((item) =>
+        item.propertyType.toLowerCase().includes(type.toLowerCase())
+      );
+    }
+    // new Date("2020-07-15").getDate() - new Date(moveInDate).getDate();
+
+    if (moveInDate) {
+      filterData = filterData.filter(
+        (data) => new Date(data.availableFrom) <= new Date(moveInDate)
+      );
+    }
 
     setData(filterData);
-  }, [houses, search]);
+  }, [houses, search, location, type, price, moveInDate]);
 
   return (
     <div>
