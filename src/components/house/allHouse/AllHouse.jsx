@@ -48,11 +48,18 @@ const AllHouse = ({ houses, search, location, type, price, moveInDate }) => {
         item.propertyType.toLowerCase().includes(type.toLowerCase())
       );
     }
-    // new Date("2020-07-15").getDate() - new Date(moveInDate).getDate();
 
     if (moveInDate) {
+      // if property is avaliable for selected date
       filterData = filterData.filter(
         (data) => new Date(data.availableFrom) <= new Date(moveInDate)
+      );
+    }
+
+    if (price.length > 1) {
+      filterData = filterData.filter(
+        (data) =>
+          data.rates >= parseInt(price[0]) && data.rates <= parseInt(price[1])
       );
     }
 

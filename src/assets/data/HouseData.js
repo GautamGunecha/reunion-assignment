@@ -251,12 +251,10 @@ export const locationFilter = [
 ];
 
 export const priceFilter = [
-  { id: 1, min: 0, max: 20000 },
-  { id: 2, min: 20000, max: 40000 },
-  { id: 3, min: 40000, max: 60000 },
-  { id: 4, min: 60000, max: 80000 },
-  { id: 5, min: 80000, max: 100000 },
-  { id: 6, min: 100000, max: 150000 },
+  { id: 1, title: "₹ 0 - ₹ 50000", value: "0 50000" },
+  { id: 2, title: "₹ 50000 - ₹ 70000", value: "50000 70000" },
+  { id: 3, title: "₹ 70000 - ₹ 90000", value: "70000 90000" },
+  { id: 4, title: "₹ 90000 - ₹ 110000", value: "90000 110000" },
 ];
 
 // houses(3), appartments(1), commercial(1);

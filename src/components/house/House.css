@@ -66,10 +66,12 @@
 
 }
 
+
+
 @media only screen and (max-width: 1000px) {
     .house-filters {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 }
 

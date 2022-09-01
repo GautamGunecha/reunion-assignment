@@ -14,6 +14,9 @@ const House = () => {
   const [loc, setLoc] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [moveInDate, setmoveInDate] = useState("");
+  const [priceRange, setPriceRange] = useState("");
+  const priceRangeVal = priceRange.split(" ");
+  console.log(priceRangeVal.length);
 
   // const daysBetween =
 
@@ -58,11 +61,11 @@ const House = () => {
 
         <section>
           <p>Price</p>
-          <select>
-            <option value="">Select</option>
+          <select onChange={(e) => setPriceRange(e.target.value)}>
+            <option value="">Price Range</option>
             {priceFilter?.map((item) => (
-              <option key={item.id} value={[item.min, item.max]}>
-                {item.min} - {item.max}
+              <option key={item.id} value={item.value}>
+                {item.title}
               </option>
             ))}
           </select>
@@ -86,6 +89,7 @@ const House = () => {
         location={loc}
         type={propertyType}
         moveInDate={moveInDate}
+        price={priceRangeVal}
       />
     </div>
   );
