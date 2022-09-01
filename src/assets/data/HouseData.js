@@ -14,6 +14,17 @@ import HomeImg12 from "../images/houses/HomeImg12.jpg";
 import HomeImg13 from "../images/houses/HomeImg13.jpg";
 import HomeImg14 from "../images/houses/HomeImg14.jpg";
 import HomeImg15 from "../images/houses/HomeImg15.jpg";
+import HomeImg16 from "../images/houses/HomeImg16.jpg";
+import HomeImg17 from "../images/houses/HomeImg17.jpg";
+import HomeImg18 from "../images/houses/HomeImg18.jpg";
+import HomeImg19 from "../images/houses/HomeImg19.jpg";
+import HomeImg20 from "../images/houses/HomeImg20.jpg";
+import HomeImg21 from "../images/houses/HomeImg21.jpg";
+import HomeImg22 from "../images/houses/HomeImg22.jpg";
+import HomeImg23 from "../images/houses/HomeImg23.jpg";
+import HomeImg24 from "../images/houses/HomeImg24.jpg";
+import HomeImg25 from "../images/houses/HomeImg25.jpg";
+import HomeImg26 from "../images/houses/HomeImg26.jpg";
 
 // category rent it - (3) or sell - (2)
 // property type: - houses(3), appartments(1), commercial(1)
@@ -219,8 +230,151 @@ export const HouseData = [
     propertyType: "appartment",
   },
   // Varanasi
+  {
+    id: 16,
+    title: "Ghat View Palace",
+    img: HomeImg16,
+    location: "Varanasi, India",
+    rates: 25000,
+    address: "1021 Ghat View, India",
+    beds: "3",
+    bathroom: "3",
+    category: "rent",
+    availableFrom: "2022-9-10",
+    propertyType: "appartment",
+  },
+  {
+    id: 17,
+    title: "Assi Ghat Palace",
+    img: HomeImg17,
+    location: "Varanasi, India",
+    rates: 50000,
+    address: "1021 Ghat View, India",
+    beds: "3",
+    bathroom: "3",
+    category: "buy",
+    availableFrom: "2022-10-10",
+    propertyType: "commercial",
+  },
+  {
+    id: 18,
+    title: "Kashi Valley",
+    img: HomeImg18,
+    location: "Varanasi, India",
+    rates: 75000,
+    address: "1021 Kashi View, India",
+    beds: "3",
+    bathroom: "3",
+    category: "buy",
+    availableFrom: "2023-10-10",
+    propertyType: "houses",
+  },
+  {
+    id: 19,
+    title: "Chenab Valley",
+    img: HomeImg19,
+    location: "Varanasi, India",
+    rates: 75000,
+    address: "2022 Kashi View, India",
+    beds: "5",
+    bathroom: "3",
+    category: "buy",
+    availableFrom: "2022-1-10",
+    propertyType: "houses",
+  },
+  {
+    id: 20,
+    title: "Kashi East",
+    img: HomeImg20,
+    location: "Varanasi, India",
+    rates: 75000,
+    address: "1021 Kashi State, India",
+    beds: "3",
+    bathroom: "3",
+    category: "buy",
+    availableFrom: "2022-5-10",
+    propertyType: "houses",
+  },
   // Chennai
+  {
+    id: 21,
+    title: "Eggmore East",
+    img: HomeImg21,
+    location: "Chennai, India",
+    rates: 75000,
+    address: "1521 Chennai State, India",
+    beds: "3",
+    bathroom: "3",
+    category: "buy",
+    availableFrom: "2021-5-10",
+    propertyType: "houses",
+  },
+  {
+    id: 22,
+    title: "Kilpauk East",
+    img: HomeImg22,
+    location: "Chennai, India",
+    rates: 11000,
+    address: "1521 Chennai Center, India",
+    beds: "4",
+    bathroom: "3",
+    category: "buy",
+    availableFrom: "2028-5-10",
+    propertyType: "houses",
+  },
+  {
+    id: 23,
+    title: "Rajkoat East",
+    img: HomeImg23,
+    location: "Chennai, India",
+    rates: 75000,
+    address: "1521 Raj Bhavan, India",
+    beds: "3",
+    bathroom: "3",
+    category: "buy",
+    availableFrom: "2026-8-10",
+    propertyType: "appartment",
+  },
   // Surat
+  {
+    id: 24,
+    title: "Surat City",
+    img: HomeImg24,
+    location: "Surat, India",
+    rates: 75000,
+    address: "1521 Surat Centre, India",
+    beds: "3",
+    bathroom: "3",
+    category: "buy",
+    availableFrom: "2024-5-10",
+    propertyType: "houses",
+  },
+  {
+    id: 25,
+    title: "Due Point",
+    img: HomeImg25,
+    location: "Surat, India",
+    rates: 10000,
+    address: "1521 Due point west, India",
+    beds: "5",
+    bathroom: "3",
+    category: "buy",
+    availableFrom: "2021-5-10",
+    propertyType: "houses",
+  },
+  {
+    id: 26,
+    title: "Valsad West View",
+    img: HomeImg26,
+    location: "Surat, India",
+    rates: 45000,
+    address: "1521 Dry State, India",
+    beds: "3",
+    bathroom: "3",
+    category: "buy",
+    availableFrom: "2025-5-10",
+    propertyType: "houses",
+  },
 ];
 
 export const locationFilter = [
