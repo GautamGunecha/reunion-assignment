@@ -9,6 +9,8 @@ import {
   priceFilter,
 } from "../../assets/data/HouseData";
 
+// House is a parent component that renders out all the required filters and Listed property
+
 const House = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [loc, setLoc] = useState("");
@@ -20,8 +22,10 @@ const House = () => {
   // const daysBetween =
 
   const date = new Date().toISOString();
+  // set today's date so that user can't select past date for movieIn
   const todayDate = date.slice(0, date.indexOf("T"));
 
+  // Getting lists of property from redux state
   const { houses } = useSelector((state) => state.listedProperty);
 
   return (
@@ -82,6 +86,7 @@ const House = () => {
           </select>
         </section>
       </div>
+      {/* Displays list of property */}
       <AllHouse
         houses={houses}
         search={searchQuery}

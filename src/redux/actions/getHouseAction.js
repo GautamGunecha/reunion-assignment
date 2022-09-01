@@ -1,5 +1,6 @@
 import * as actionTypes from "../constants/actionType";
 
+// gets list of house and set it to state
 export const getHouseListsAction = (data) => async (dispatch) => {
   try {
     dispatch({
@@ -14,6 +15,7 @@ export const getHouseListsAction = (data) => async (dispatch) => {
   }
 };
 
+// helps user to add property to wishList
 export const wishListAction = (id) => async (dispatch, getState) => {
   try {
     const {
@@ -35,6 +37,8 @@ export const wishListAction = (id) => async (dispatch, getState) => {
     });
   }
 };
+
+// helps user to remove property from wishlist
 
 export const removeFromWishListAction = (id) => async (dispatch, getState) => {
   try {

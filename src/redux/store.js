@@ -6,6 +6,8 @@ import {
   wishListReducer,
 } from "./reducers/getHouseReducer";
 
+// connects all reducers that can be esily access through entire web components
+
 const reducers = combineReducers({
   listedProperty: getHouseListReducer,
   wishLists: wishListReducer,

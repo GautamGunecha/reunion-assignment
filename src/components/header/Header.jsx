@@ -6,6 +6,8 @@ import { ImHome } from "react-icons/im";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import "./Header.css";
 
+// Top most header nav bar
+
 const Header = () => {
   const { wish } = useSelector((state) => state.wishLists);
   return (

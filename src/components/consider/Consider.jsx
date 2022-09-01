@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 
 import "./Consider.css";
 
+// Helps out user to look for other popular property
+// This components render in product page so that user can look forward to other options quickly
+
 const Consider = () => {
   const { houses } = useSelector((state) => state.listedProperty);
 

@@ -1,3 +1,5 @@
+// all actions defined
+
 export const GET_ALL_LISTED_PROPERTY = "GET_ALL_LISTED_PROPERTY";
 export const ADD_TO_WISHLIST = "ADD_TO_WISHLIST";
 export const REMOVE_FROM_WISHLIST = "REMOVE_FROM_WISHLIST";

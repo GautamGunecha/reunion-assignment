@@ -7,6 +7,8 @@ import Home from "../pages/Home";
 import HousePage from "../pages/property/housePage/HousePage";
 import WishList from "../pages/wishList/WishList";
 
+// Handle routes for entire web application
+
 const MyRoutes = () => {
   return (
     <BrowserRouter>

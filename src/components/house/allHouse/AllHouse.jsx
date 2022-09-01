@@ -10,7 +10,15 @@ import Card from "../../card/Card";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import "./AllHouse.css";
 
+// This component renders out list of all property and accepts filters.
+
+// Initial posts that display on page
 const postPerRow = 8;
+
+// load more by + 4
+const showPost = 4;
+
+// keys helps user to search in these required fields.
 const keys = ["title", "location", "address", "category", "propertyType"];
 
 const AllHouse = ({ houses, search, location, type, price, moveInDate }) => {
@@ -20,18 +28,21 @@ const AllHouse = ({ houses, search, location, type, price, moveInDate }) => {
   const dispatch = useDispatch();
   const { wish } = useSelector((state) => state.wishLists);
 
+  // add property to wishList
   const addToWishList = (id) => {
     dispatch(wishListAction(id));
   };
 
+  // remove property from wishlist
   const removeFromWishList = (id) => {
     dispatch(removeFromWishListAction(id));
   };
 
   const handleMorePosts = () => {
-    setNext(next + postPerRow);
+    setNext(next + showPost);
   };
 
+  // handle user filter requests.
   useEffect(() => {
     let filterData = houses?.filter((item) =>
       keys.some((key) => item[key].toLowerCase().includes(search.toLowerCase()))
@@ -106,11 +117,13 @@ const AllHouse = ({ houses, search, location, type, price, moveInDate }) => {
           <h1>No property found :(</h1>
         )}
       </div>
-      {next < houses?.length && (
-        <button className="loadmore-btn" onClick={handleMorePosts}>
-          Load more
-        </button>
-      )}
+      {data.length > 4
+        ? next < houses?.length && (
+            <button className="loadmore-btn" onClick={handleMorePosts}>
+              Load more
+            </button>
+          )
+        : ""}
     </div>
   );
 };

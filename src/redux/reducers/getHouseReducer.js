@@ -1,5 +1,7 @@
 import * as actionTypes from "../constants/actionType";
 
+// Helps us to maintain web life-cycle and state
+
 const houseListState = {
   houses: [],
 };

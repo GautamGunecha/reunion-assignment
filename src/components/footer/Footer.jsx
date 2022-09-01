@@ -7,6 +7,8 @@ import {
 } from "react-icons/ai";
 import "./Footer.css";
 
+// Footer of web application with all social details
+
 const Footer = () => {
   const date = new Date().getFullYear();
   return (
