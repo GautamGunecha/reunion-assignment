@@ -69,38 +69,42 @@ const AllHouse = ({ houses, search, location, type, price, moveInDate }) => {
   return (
     <div>
       <div className="all-houses">
-        {data?.slice(0, next).map((data) => (
-          <Card key={data.id}>
-            <div className="all-houses-card">
-              <Link to={`/property/${data.id}`}>
-                <img src={data.img} alt={data.title} />
-              </Link>
-              <div className="all-houses-details">
-                <div className="all-houses-costing">
-                  <p>₹ {data.rates}/month</p>
-                  <section className="all-houses-wishListIcon">
-                    {wish.find((item) => item.id === parseInt(data.id)) ? (
-                      <AiFillHeart
-                        size={25}
-                        className="icon house-icon"
-                        onClick={() => removeFromWishList(data.id)}
-                      />
-                    ) : (
-                      <AiOutlineHeart
-                        size={25}
-                        className="icon house-icon"
-                        onClick={() => addToWishList(data.id)}
-                      />
-                    )}
-                  </section>
+        {data.length > 0 ? (
+          data?.slice(0, next).map((data) => (
+            <Card key={data.id}>
+              <div className="all-houses-card">
+                <Link to={`/property/${data.id}`}>
+                  <img src={data.img} alt={data.title} />
+                </Link>
+                <div className="all-houses-details">
+                  <div className="all-houses-costing">
+                    <p>₹ {data.rates}/month</p>
+                    <section className="all-houses-wishListIcon">
+                      {wish.find((item) => item.id === parseInt(data.id)) ? (
+                        <AiFillHeart
+                          size={25}
+                          className="icon house-icon"
+                          onClick={() => removeFromWishList(data.id)}
+                        />
+                      ) : (
+                        <AiOutlineHeart
+                          size={25}
+                          className="icon house-icon"
+                          onClick={() => addToWishList(data.id)}
+                        />
+                      )}
+                    </section>
+                  </div>
+                  <h1>{data.title}</h1>
+                  <p>{data.address}</p>
+                  {/* Essential Details */}
                 </div>
-                <h1>{data.title}</h1>
-                <p>{data.address}</p>
-                {/* Essential Details */}
               </div>
-            </div>
-          </Card>
-        ))}
+            </Card>
+          ))
+        ) : (
+          <h1>No property found :(</h1>
+        )}
       </div>
       {next < houses?.length && (
         <button className="loadmore-btn" onClick={handleMorePosts}>
