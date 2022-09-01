@@ -16,7 +16,6 @@ const House = () => {
   const [moveInDate, setmoveInDate] = useState("");
   const [priceRange, setPriceRange] = useState("");
   const priceRangeVal = priceRange.split(" ");
-  console.log(priceRangeVal.length);
 
   // const daysBetween =
 
